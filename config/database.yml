@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: game_tracker_development
+
+test:
+  <<: *default
+  database: game_tracker_test
+
+production:
+  <<: *default
+  database: game_tracker_production
+  username: game_tracker
+  password: <%= ENV['GAME_TRACKER_DATABASE_PASSWORD'] %>
