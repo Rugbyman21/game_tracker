@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
+  devise_for :users
   root :to => "homes#index"
 
   resources :genres
 
-  devise_for :users
+
 
 
 end
