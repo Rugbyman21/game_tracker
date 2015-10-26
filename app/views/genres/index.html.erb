@@ -1,0 +1,16 @@
+<div class="jumbotron">
+      <div class="container">
+        <h1>Genres</h1>
+        <p><h3>Here are all the Genres!</h3></p>
+      </div>
+</div>
+
+      <div class="row">
+        <% @genres.each do |genre| %>
+        <div class="col-md-3">
+          <li><%= link_to "#{genre.name}", genre_path(genre) %> </li>
+        </div>
+          <% end %>
+      </div>
+
+<%= link_to "New Genre", new_genre_path %>
