@@ -22,6 +22,9 @@ class GenresController < ApplicationController
 
   def destroy
     genre = Genre.find(params[:id])
+    genre.games.each do |game|
+      game.destroy
+    end
     genre.destroy
     redirect_to genres_path
   end

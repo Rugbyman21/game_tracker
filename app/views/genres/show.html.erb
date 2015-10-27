@@ -10,3 +10,11 @@
 <%= link_to "Delete", genre_path(@genre), :data => {confirm: "Are Your Sure?", method: "delete"}, class: "btn btn-danger" %>
 
 <%= link_to "Add a Game", new_genre_game_path(@genre), class: "btn btn-primary" %>
+
+<div class="row">
+  <% @genre.games.each do |game| %>
+    <div class="col-md-3">
+      <h3><%= link_to "#{game.title}", genre_game_path(@genre, game) %></h3>
+    </div>
+  <% end %>
+</div>

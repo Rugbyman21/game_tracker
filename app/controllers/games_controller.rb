@@ -23,6 +23,26 @@ class GamesController < ApplicationController
     @genre = @game.genre
   end
 
+  def destroy
+    game = Game.find(params[:id])
+    @genre = game.genre
+    game.destroy
+    redirect_to genre_path(@genre)
+  end
+
+  def edit
+    @game = Game.find(params[:id])
+  end
+
+  def update
+   @game = Game.find(params[:id])
+   if @game.update(game_params)
+     redirect_to genre_game_path(@game)
+   else
+     render :edit
+   end
+ end
+
   private
   def game_params
     params.require(:game).permit(:title, :rating)
