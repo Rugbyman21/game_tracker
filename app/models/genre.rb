@@ -1,4 +1,4 @@
 class Genre < ActiveRecord::Base
-  has_many :game
+  has_many :games
   validates :name, :presence => true
 end

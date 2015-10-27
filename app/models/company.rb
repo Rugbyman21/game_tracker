@@ -1,5 +1,5 @@
 class Company < ActiveRecord::Base
-  has_many :game
+  has_many :games
   validates :name, :presence => true
   validates :country, :presence => true
   validates :city, :presence => true

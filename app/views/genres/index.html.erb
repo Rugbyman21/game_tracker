@@ -7,10 +7,10 @@
 
       <div class="row">
         <% @genres.each do |genre| %>
-        <div class="col-md-3">
-          <li><%= link_to "#{genre.name}", genre_path(genre) %> </li>
-        </div>
-          <% end %>
+          <div class="col-md-3">
+            <li><%= link_to "#{genre.name}", genre_path(genre) %> </li>
+          </div>
+        <% end %>
       </div>
 
 <%= link_to "New Genre", new_genre_path %>
