@@ -32,12 +32,14 @@ class GamesController < ApplicationController
 
   def edit
     @game = Game.find(params[:id])
+    @genre = Genre.find(params[:genre_id])
   end
 
   def update
    @game = Game.find(params[:id])
+   @genre = Genre.find(params[:genre_id])
    if @game.update(game_params)
-     redirect_to genre_game_path(@game)
+     redirect_to genre_path(@genre)
    else
      render :edit
    end

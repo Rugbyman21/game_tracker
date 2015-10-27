@@ -4,4 +4,8 @@ class Game < ActiveRecord::Base
   validates :title, :presence => true
   validates :rating, :presence => true
 
+  default_scope {
+    order('title ASC')
+  }
+
 end
