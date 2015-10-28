@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe Company do
-  it { should have_many :game }
+  it { should have_many :games }
   it { should validate_presence_of :name }
   it { should validate_presence_of :country }
   it { should validate_presence_of :city }

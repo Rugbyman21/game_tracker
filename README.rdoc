@@ -22,7 +22,7 @@ _{Leave nothing to chance! You want it to be easy for potential employers and co
 
 ## Technologies Used
 
-_Ruby, Html, Rails, JavaScript, CSS, Postgres, Capybara, _
+_Ruby, Html, Rails, JavaScript, CSS, Postgres, Capybara,_
 
 ### Legal
 
