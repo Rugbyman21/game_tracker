@@ -1,6 +1,8 @@
 <h1>Add a New Game to <%= @genre.name %></h1>
 
-<%= link_to "Back to #{@genre.name}", genre_path(@genre), class: "btn btn-primary" %>
-
-
 <%= render "form" %>
+
+<br>
+
+
+<%= link_to "Back to #{@genre.name}", genre_path(@genre), class: "btn btn-primary" %>

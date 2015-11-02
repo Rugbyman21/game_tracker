@@ -19,7 +19,8 @@ end
 describe "delete genre path" do
   it "will delete a genre" do
     genre = Genre.create({name: "Mature"})
-    visit genre_path(genre)
+    game = Game.create({title: "Halo", rating: 7, genre_id: genre.id})
+    visit genre_path(genre, game)
     click_on "Delete"
     expect(page).to have_no_content "Mature"
   end

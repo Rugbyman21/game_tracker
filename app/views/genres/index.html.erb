@@ -8,7 +8,7 @@
       <div class="row">
         <% @genres.each do |genre| %>
           <div class="col-md-3">
-            <li><%= link_to "#{genre.name}", genre_path(genre) %> </li>
+            <li><%= link_to "#{genre.name.split(" ").map(&:capitalize).join(" ")}", genre_path(genre) %> </li>
           </div>
         <% end %>
       </div>
