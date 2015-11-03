@@ -540,7 +540,7 @@
       "/Users/trevorscherling/Desktop/game_tracker/app/controllers/games_controller.rb": [
         1,
         1,
-        0,
+        null,
         null,
         null,
         1,
@@ -645,7 +645,15 @@
       "/Users/trevorscherling/Desktop/game_tracker/app/controllers/homes_controller.rb": [
         1,
         1,
+        null,
+        null,
         0,
+        0,
+        null,
+        null,
+        null,
+        0,
+        null,
         null,
         null,
         null
@@ -766,6 +774,6 @@
         null
       ]
     },
-    "timestamp": 1446438279
+    "timestamp": 1446447466
   }
 }

@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-11-01T20:24:39-08:00">2015-11-01T20:24:39-08:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-11-01T22:57:46-08:00">2015-11-01T22:57:46-08:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">98.27%</span></span>
+    (<span class="covered_percent"><span class="green">97.84%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.47
+         1.48
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>31</b> files in total.
-    <b>231</b> relevant lines. 
+    <b>232</b> relevant lines. 
     <span class="green"><b>227</b> lines covered</span> and
-    <span class="red"><b>4</b> lines missed </span>
+    <span class="red"><b>5</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -62,12 +62,12 @@
       
       <tr>
         <td class="strong"><a href="#51b5ca14e91368d28e3877b0f5466dbe0ee8ccf2" class="src_link" title="app/controllers/games_controller.rb">app/controllers/games_controller.rb</a></td>
-        <td class="green strong">93.75 %</td>
+        <td class="green strong">96.77 %</td>
         <td>52</td>
-        <td>32</td>
+        <td>31</td>
         <td>30</td>
-        <td>2</td>
-        <td>1.2</td>
+        <td>1</td>
+        <td>1.3</td>
       </tr>
       
       <tr>
@@ -82,12 +82,12 @@
       
       <tr>
         <td class="strong"><a href="#fe2117edb4db81c7e61447cb44280ff2786af8c2" class="src_link" title="app/controllers/homes_controller.rb">app/controllers/homes_controller.rb</a></td>
-        <td class="red strong">66.67 %</td>
-        <td>6</td>
-        <td>3</td>
+        <td class="red strong">40.0 %</td>
+        <td>14</td>
+        <td>5</td>
         <td>2</td>
-        <td>1</td>
-        <td>0.7</td>
+        <td>3</td>
+        <td>0.4</td>
       </tr>
       
       <tr>
@@ -427,11 +427,11 @@
         <div class="source_table" id="51b5ca14e91368d28e3877b0f5466dbe0ee8ccf2">
   <div class="header">
     <h3>app/controllers/games_controller.rb</h3>
-    <h4><span class="green">93.75 %</span> covered</h4>
+    <h4><span class="green">96.77 %</span> covered</h4>
     <div>
-      <b>32</b> relevant lines. 
+      <b>31</b> relevant lines. 
       <span class="green"><b>30</b> lines covered</span> and
-      <span class="red"><b>2</b> lines missed.</span>
+      <span class="red"><b>1</b> lines missed.</span>
     </div>
   </div>
   
@@ -450,10 +450,10 @@
           <code class="ruby">  def index</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="3">
+        <li class="never" data-hits="" data-linenumber="3">
           
           
-          <code class="ruby">    @games = Game.all</code>
+          <code class="ruby">    # @games = Game.all</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="4">
@@ -1069,11 +1069,11 @@
         <div class="source_table" id="fe2117edb4db81c7e61447cb44280ff2786af8c2">
   <div class="header">
     <h3>app/controllers/homes_controller.rb</h3>
-    <h4><span class="red">66.67 %</span> covered</h4>
+    <h4><span class="red">40.0 %</span> covered</h4>
     <div>
-      <b>3</b> relevant lines. 
+      <b>5</b> relevant lines. 
       <span class="green"><b>2</b> lines covered</span> and
-      <span class="red"><b>1</b> lines missed.</span>
+      <span class="red"><b>3</b> lines missed.</span>
     </div>
   </div>
   
@@ -1092,25 +1092,73 @@
           <code class="ruby">  def index</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="3">
+        <li class="never" data-hits="" data-linenumber="3">
           
           
-          <code class="ruby">    render template: &quot;home&quot;</code>
+          <code class="ruby">    # render template: &quot;home&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="4">
           
           
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="5">
+          
+          
+          <code class="ruby">    if user_signed_in?</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="6">
+          
+          
+          <code class="ruby">      redirect_to genres_path</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="10">
+          
+          
+          <code class="ruby">      render template: &quot;home&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
           <code class="ruby">    # @games = Game.all</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="5">
+        <li class="never" data-hits="" data-linenumber="13">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="6">
+        <li class="never" data-hits="" data-linenumber="14">
           
           
           <code class="ruby">end</code>
