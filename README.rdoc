@@ -5,7 +5,7 @@ application up and running.
 
 # _Game Tracker_
 
-##### _{Brief description of application}, October 27, 2015_
+##### _{Brief description of application}, November 4, 2015_
 
 #### By _**Trevor Scherling**_
 
