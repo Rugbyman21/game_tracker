@@ -1,6 +1,6 @@
 <div class="jumbotron">
   <div class="container">
-    <h1><%= @genre.name %></h1>
+    <h1><%= "#{@genre.name.split(" ").map(&:capitalize).join(" ")}" %></h1>
       <p>This is a Game tracker app that was done using ruby on rails and bootstraps!</p>
   </div>
 </div>
@@ -15,6 +15,7 @@
     <% @genre.games.each do |game| %>
       <div class="col-md-3">
         <h3><%= link_to "#{game.title.split(" ").map(&:capitalize).join(" ")}", genre_game_path(@genre, game) %></h3>
+        
       </div>
     <% end %>
   </div>

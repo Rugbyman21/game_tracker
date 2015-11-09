@@ -9,7 +9,8 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'devise'
 gem 'bootstrap-sass'
-gem "paperclip"
+gem 'paperclip'
+gem 'acts_as_votable'
 
 
 group :development do
