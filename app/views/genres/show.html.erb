@@ -5,16 +5,17 @@
   </div>
 </div>
 
-<%= link_to "Update", edit_genre_path(@genre), class: "btn btn-warning" %>
+<div class="container">
 
-<%= link_to "Delete", genre_path(@genre), :data => {confirm: "Are Your Sure?", method: "delete"}, class: "btn btn-danger" %>
+  <%= link_to "Update", edit_genre_path(@genre), class: "btn btn-warning" %>
+  <%= link_to "Delete", genre_path(@genre), :data => {confirm: "Are Your Sure?", method: "delete"}, class: "btn btn-danger" %>
+  <%= link_to "Add a Game", new_genre_game_path(@genre), class: "btn btn-primary" %>
 
-<%= link_to "Add a Game", new_genre_game_path(@genre), class: "btn btn-primary" %>
-
-<div class="row">
-  <% @genre.games.each do |game| %>
-    <div class="col-md-3">
-      <h3><%= link_to "#{game.title.split(" ").map(&:capitalize).join(" ")}", genre_game_path(@genre, game) %></h3>
-    </div>
-  <% end %>
+  <div class="row">
+    <% @genre.games.each do |game| %>
+      <div class="col-md-3">
+        <h3><%= link_to "#{game.title.split(" ").map(&:capitalize).join(" ")}", genre_game_path(@genre, game) %></h3>
+      </div>
+    <% end %>
+  </div>
 </div>

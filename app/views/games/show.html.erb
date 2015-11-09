@@ -1,10 +1,11 @@
 <div class="container">
-  <h1><%= @game.title %> - <em><%= @genre.name %></h1>
-  <p><h4>Rating: <%= @game.rating %></h4></p>
+  <h1><%= "#{@game.title.split(" ").map(&:capitalize).join(" ")}" %> - <em><%= @genre.name %><p><h4>Rating: <%= @game.rating %></h4></p></h1>
+  <%= image_tag @game.image.url(:medium).to_s %>
+
+    <br>
+    <br>
+
+  <%= link_to "Update", edit_genre_game_path(@genre, @game), class: "btn btn-warning" %>
+  <%= link_to "Delete", genre_game_path(@genre, @game), :data => {confirm: "Are Your Sure?", method: "delete"}, class: "btn btn-danger" %>
+  <%= link_to "Back to Genre", genre_path(@genre), class: "btn btn-primary" %>
 </div>
-
-<%= link_to "Update", edit_genre_game_path(@genre, @game), class: "btn btn-warning" %>
-
-<%= link_to "Delete", genre_game_path(@genre, @game), :data => {confirm: "Are Your Sure?", method: "delete"}, class: "btn btn-danger" %>
-
-<%= link_to "Back to Genre", genre_path(@genre), class: "btn btn-primary" %>

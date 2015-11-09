@@ -1,9 +1,14 @@
 <%= render "layouts/errors", :object => @game %>
 
-<%= form_for [@genre, @game] do |f| %>
+<%= form_for [@genre, @game], html: { multipart: true } do |f| %>
   <div class="form-group">
     <%= f.label :title %>
     <%= f.text_field :title, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :image %>
+    <%= f.file_field :image, class: "form-control" %>
   </div>
 
   <div class="form-group">
