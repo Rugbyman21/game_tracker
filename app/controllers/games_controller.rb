@@ -1,4 +1,5 @@
 class GamesController < ApplicationController
+  before_action :set_game, only: [:upvote, :downvote]
   def index
     # @games = Game.all
   end
@@ -45,7 +46,22 @@ class GamesController < ApplicationController
    end
  end
 
-  private
+  def upvote
+    @game.upvote_from current_user
+    redirect_to genre_game_path(@genre, @game)
+  end
+
+  def downvote
+    @game.downvote_from current_user
+    redirect_to genre_game_path(@genre, @game)
+  end
+
+
+private
+  def set_game
+    @game = Game.find(params[:id])
+    @genre = Genre.find(params[:genre_id])
+  end
   def game_params
     params.require(:game).permit(:title, :rating, :image)
   end

@@ -1,6 +1,25 @@
 <div class="container">
-  <h1><%= "#{@game.title.split(" ").map(&:capitalize).join(" ")}" %> - <em><%= @genre.name %><p><h4>Rating: <%= @game.rating %></h4></p></h1>
+  <h1><%= "#{@game.title.split(" ").map(&:capitalize).join(" ")}" %> - <em><%= "#{@genre.name.split(" ").map(&:capitalize).join(" ")}" %>
+    <p><h4>Rating: <%= @game.rating %></h4>
+      <div class="caption" style="text-align:left;">
+        <%= link_to like_genre_game_path(@genre, @game), class: "like", method: :put do %>
+          <button type="button" class="btn btn-success" aria-label="left align">
+            <span class="glyphicon glyphicon-thumbs-up glyphicon-align-center" aria-hidden="true"></span>
+            <span class="badge"><%= @game.get_upvotes.size %></span>
+          </button>
+        <% end %>
+
+        <%= link_to unlike_genre_game_path(@genre, @game), class: "like", method: :put do %>
+          <button type="button" class="btn btn-danger" aria-label="left align">
+            <span class="glyphicon glyphicon-thumbs-down glyphicon-align-center" aria-hidden="true"></span>
+            <span class="badge"><%= @game.get_downvotes.size %></span>
+          </button>
+        <% end %>
+      </div>
+    </p>
+  </h1>
   <%= image_tag @game.image.url(:medium).to_s %>
+
 
     <br>
     <br>

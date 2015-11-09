@@ -4,7 +4,12 @@ Rails.application.routes.draw do
   root :to => "homes#index"
 
   resources :genres do
-    resources :games
+    resources :games do
+      member do
+        put "like" => "games#upvote"
+        put "unlike" => "games#downvote"
+      end
+    end
   end
 
 
