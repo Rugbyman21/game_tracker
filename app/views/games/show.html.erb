@@ -26,5 +26,5 @@
 
   <%= link_to "Update", edit_genre_game_path(@genre, @game), class: "btn btn-warning" %>
   <%= link_to "Delete", genre_game_path(@genre, @game), :data => {confirm: "Are Your Sure?", method: "delete"}, class: "btn btn-danger" %>
-  <%= link_to "Back to Genre", genre_path(@genre), class: "btn btn-primary" %>
+  <%= link_to "Back to #{@genre.name.split(" ").map(&:capitalize).join(" ")} Genre", genre_path(@genre), class: "btn btn-primary" %>
 </div>

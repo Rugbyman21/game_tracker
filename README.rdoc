@@ -3,35 +3,35 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-* _Game Tracker_
+== Game Tracker
 
-**** _{Brief description of application}, November 9, 2015_
+{Brief description of application}, November 10, 2015
 
-*** By _**Trevor Scherling**_
+By Trevor Scherling
 
-** Description
+Description
 
-_{This is a detailed description of your application. Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. Do you want other developers to use this code in their apps? Talk about things like that here in simple terms.}_
+{This is a detailed description of your application. Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. Do you want other developers to use this code in their apps? Talk about things like that here in simple terms.}
 
-** Setup
+= Setup
 
-* _Clone to Desktop_
-* _In the terminal..._
-* _Make sure 'postgres' is running_
-* _rake db:create_
-* _rake db:migrate_
-* _Start server by typing 'rails s'_
-* _In Browser type localhost:3000_
+* Clone to Desktop
+* In the terminal...
+* Make sure 'postgres' is running
+* rake db:create
+* rake db:migrate
+* Start server by typing 'rails s'
+* In Browser type localhost:3000
 
-_{Leave nothing to chance! You want it to be easy for potential employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Are there other applications this app depends on?}_
+{Leave nothing to chance! You want it to be easy for potential employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Are there other applications this app depends on?}
 
-** Technologies Used
+== Technologies Used
 
-_Ruby, Html, Rails, JavaScript, CSS, Postgres, Capybara,_
+Ruby, Html, Rails, JavaScript, CSS, Postgres, Capybara
 
-*** Legal
+== Legal
 
-Copyright (c) 2015 **_Trevor Scherling_**
+Copyright (c) 2015 Trevor Scherling
 
 This software is licensed under the MIT license.
 

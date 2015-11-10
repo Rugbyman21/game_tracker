@@ -8,7 +8,7 @@ class Game < ActiveRecord::Base
   validates :rating, :presence => true
 
   default_scope {
-    order('title ASC')
+    order('upper(title)')
   }
 
 end
