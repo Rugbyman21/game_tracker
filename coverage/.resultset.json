@@ -513,12 +513,18 @@
         null,
         1,
         1,
+        1,
+        1,
+        1,
+        null,
+        null,
         null,
         null,
         null,
         null
       ],
       "/Users/trevorscherling/Desktop/game_tracker/app/models/user.rb": [
+        1,
         1,
         null,
         null,
@@ -538,6 +544,7 @@
         null
       ],
       "/Users/trevorscherling/Desktop/game_tracker/app/controllers/games_controller.rb": [
+        1,
         1,
         1,
         null,
@@ -586,6 +593,21 @@
         null,
         null,
         1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        1,
+        0,
+        0,
+        null,
         1,
         3,
         null,
@@ -670,6 +692,7 @@
         null
       ],
       "/Users/trevorscherling/Desktop/game_tracker/app/models/game.rb": [
+        1,
         1,
         1,
         1,
@@ -776,6 +799,6 @@
         null
       ]
     },
-    "timestamp": 1447104310
+    "timestamp": 1447114385
   }
 }

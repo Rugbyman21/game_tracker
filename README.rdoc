@@ -3,17 +3,17 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-# _Game Tracker_
+* _Game Tracker_
 
-##### _{Brief description of application}, November 4, 2015_
+**** _{Brief description of application}, November 9, 2015_
 
-#### By _**Trevor Scherling**_
+*** By _**Trevor Scherling**_
 
-## Description
+** Description
 
 _{This is a detailed description of your application. Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. Do you want other developers to use this code in their apps? Talk about things like that here in simple terms.}_
 
-## Setup
+** Setup
 
 * _Clone to Desktop_
 * _In the terminal..._
@@ -25,11 +25,11 @@ _{This is a detailed description of your application. Give as much detail as nee
 
 _{Leave nothing to chance! You want it to be easy for potential employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Are there other applications this app depends on?}_
 
-## Technologies Used
+** Technologies Used
 
 _Ruby, Html, Rails, JavaScript, CSS, Postgres, Capybara,_
 
-### Legal
+*** Legal
 
 Copyright (c) 2015 **_Trevor Scherling_**
 
