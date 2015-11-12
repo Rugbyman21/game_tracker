@@ -1,13 +1,14 @@
 class HomesController < ApplicationController
-  def index
-    # render template: "home"
 
-    if user_signed_in?
-      redirect_to genres_path
+  def index
+
+
+    if current_user
+      render template: "home"
 
     else
 
-      render template: "home"
+      redirect_to user_session_path
     end
     # @games = Game.all
   end

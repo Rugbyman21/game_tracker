@@ -11,6 +11,7 @@ gem 'devise'
 gem 'bootstrap-sass'
 gem 'paperclip'
 gem 'acts_as_votable'
+gem 'rails_admin', '~> 0.7.0'
 
 
 group :development do
