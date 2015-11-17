@@ -1,7 +1,8 @@
 <div class="container">
   <h1><%= "#{@game.title.split(" ").map(&:capitalize).join(" ")}" %> - <em><%= "#{@genre.name.split(" ").map(&:capitalize).join(" ")}" %>
-    <p><h4>Rating: <%= @game.rating %></h4>
+    <p><h4>Rating: <%= "#{@game.rating.split(" ").map(&:capitalize).join(" ")}" %></h4>
       <div class="caption" style="text-align:left;">
+
         <%= link_to like_genre_game_path(@genre, @game), class: "like", method: :put do %>
           <button type="button" class="btn btn-success" aria-label="left align">
             <span class="glyphicon glyphicon-thumbs-up glyphicon-align-center" aria-hidden="true"></span>
@@ -18,8 +19,8 @@
       </div>
     </p>
   </h1>
-  <%= image_tag @game.image.url(:medium).to_s %>
 
+  <%= image_tag @game.image.url(:medium).to_s %>
 
     <br>
     <br>

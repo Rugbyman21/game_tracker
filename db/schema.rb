@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151112183734) do
+ActiveRecord::Schema.define(version: 20151113180439) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,7 +38,22 @@ ActiveRecord::Schema.define(version: 20151112183734) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.integer  "cached_votes_total",      default: 0
+    t.integer  "cached_votes_score",      default: 0
+    t.integer  "cached_votes_up",         default: 0
+    t.integer  "cached_votes_down",       default: 0
+    t.integer  "cached_weighted_score",   default: 0
+    t.integer  "cached_weighted_total",   default: 0
+    t.float    "cached_weighted_average", default: 0.0
   end
+
+  add_index "games", ["cached_votes_down"], name: "index_games_on_cached_votes_down", using: :btree
+  add_index "games", ["cached_votes_score"], name: "index_games_on_cached_votes_score", using: :btree
+  add_index "games", ["cached_votes_total"], name: "index_games_on_cached_votes_total", using: :btree
+  add_index "games", ["cached_votes_up"], name: "index_games_on_cached_votes_up", using: :btree
+  add_index "games", ["cached_weighted_average"], name: "index_games_on_cached_weighted_average", using: :btree
+  add_index "games", ["cached_weighted_score"], name: "index_games_on_cached_weighted_score", using: :btree
+  add_index "games", ["cached_weighted_total"], name: "index_games_on_cached_weighted_total", using: :btree
 
   create_table "genres", force: :cascade do |t|
     t.string   "name"

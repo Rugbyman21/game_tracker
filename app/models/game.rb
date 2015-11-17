@@ -10,5 +10,8 @@ class Game < ActiveRecord::Base
   default_scope {
     order('upper(title)')
   }
+  # default_scope {
+  #   order(:cached_votes_score => :asc)
+  # }
 
 end
