@@ -1,11 +1,10 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Note: Get help on the deletion of reviews from the genre controller folder....
 
 == Game Tracker
 
-{Brief description of application}, November 10, 2015
+Allows the user to keep track, rate and post comments on their favorite video games, November 17, 2015
 
 By Trevor Scherling
 
