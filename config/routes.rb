@@ -13,8 +13,8 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :games do
-    resources :reviews
+  resources :games, :except => [:index, :create, :new, :edit, :show, :update, :destroy] do
+    resources :reviews, :only => [:create, :new, :show]
   end
 
 
