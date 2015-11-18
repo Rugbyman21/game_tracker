@@ -1,5 +1,5 @@
 class GenresController < ApplicationController
-  before_action :authenticate_user!
+  # before_action :authenticate_user!
   def index
     @genres = Genre.all
   end
@@ -23,6 +23,9 @@ class GenresController < ApplicationController
 
   def destroy
     genre = Genre.find(params[:id])
+    # game.reviews.each do |review|
+    #   review.destroy
+    # end
     genre.games.each do |game|
       game.destroy
     end

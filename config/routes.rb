@@ -13,5 +13,9 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :games do
+    resources :reviews
+  end
+
 
 end

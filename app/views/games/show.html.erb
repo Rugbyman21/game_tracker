@@ -19,13 +19,25 @@
       </div>
     </p>
   </h1>
-
   <%= image_tag @game.image.url(:medium).to_s %>
-
     <br>
     <br>
 
   <%= link_to "Update", edit_genre_game_path(@genre, @game), class: "btn btn-warning" %>
   <%= link_to "Delete", genre_game_path(@genre, @game), :data => {confirm: "Are Your Sure?", method: "delete"}, class: "btn btn-danger" %>
   <%= link_to "Back to #{@genre.name.split(" ").map(&:capitalize).join(" ")} Genre", genre_path(@genre), class: "btn btn-primary" %>
+  <%= link_to "Post a Comment", new_game_review_path(@game, @review), class: "btn btn-primary" %>
+  <br>
+  <br>
+  <div class="row">
+    <% @game.reviews.each do |review| %>
+      <div class="col-xs-6 col-md-3">
+        <div class="thumbnail">
+        <p><%= review.author %> - <em> <%= review.created_at.to_date.to_formatted_s(:long_ordinal) %></em></p>
+        <p><%= review.content %></p>
+
+      </div>
+      </div>
+    <% end %>
+  </div>
 </div>

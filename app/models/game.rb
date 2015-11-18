@@ -4,6 +4,7 @@ class Game < ActiveRecord::Base
   validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
   belongs_to :genre
   belongs_to :company
+  has_many :reviews
   validates :title, :presence => true
   validates :rating, :presence => true
 
